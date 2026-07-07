@@ -43,9 +43,10 @@ Foram processados dados meteorológicos da base Copernicus (`ERA5`/`ERA5-Land`) 
 ---
 
 ## 👁️ Parte 2 – Visão Computacional com YOLO
+[Clique aqui para abrir o Notebook da Parte 2](acaibarbeiro.ipynb)
 Aplicação de visão computacional utilizando a biblioteca `YOLO/Ultralytics` para detectar elementos associados à produção de açaí e ao risco sanitário. O modelo foi treinado para realizar a detecção visual do inseto vetor (*barbeiro/triatomíneo*) e das estruturas do fruto (*acai*, *cacho*).
 
-[Clique aqui para abrir o Notebook da Parte 2](acaibarbeiro.ipynb)
+
 ---
 
 ## 📊 Parte 3 – Análise Integrada entre Clima e Production de Açaí
