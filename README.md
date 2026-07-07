@@ -14,31 +14,53 @@ Este repositório contém o desenvolvimento prático da análise integrada da pr
 ---
 
 ## 🗺️ Parte 1 – Mapeamento Climático
+
+[Clique aqui para abrir o Notebook da Parte 1](Parte1GeoModelagem.ipynb)
 Nesta etapa, criamos os mapas climáticos sazonais do Estado do Pará utilizando a biblioteca `Cartopy` em Python, destacando a principal região produtora de açaí (Igarapé-Miri, Cametá, Abaetetuba e entorno). 
-Foram processados dados meteorológicos da base Copernicus (`ERA5`/`ERA5-Land`) referentes ao ano de 2024 (horário das 15h) para produzir os 16 mapas climáticos cobrindo as quatro estações para as variáveis de:
-* Precipitação
-* Temperatura do Ar (convertida de Kelvin para Celsius)
-* Intensidade do Vento ($V = \sqrt{u^2 + v^2}$)
-* Umidade Específica
+
+Foram processados dados meteorológicos da base Copernicus (`ERA5`/`ERA5-Land`) referentes ao ano de 2024 (horário das 15h). Abaixo estão os 16 mapas gerados, organizados por variável atmosférica e estação do ano:
+
+### 🌧️ Precipitação ou Índice Pluviométrico
+| Verão | Outono | Inverno | Primavera |
+| :---: | :---: | :---: | :---: |
+| ![Precipitação Verão](prec_verao.png) | ![Precipitação Outono](prec_outono.png) | ![Precipitação Inverno](prec_inverno.png) | ![Precipitação Primavera](prec_primavera.png) |
+
+### 🌡️ Temperatura do Ar (ºC)
+| Verão | Outono | Inverno | Primavera |
+| :---: | :---: | :---: | :---: |
+| ![Temperatura Verão](temp_verao.png) | ![Temperatura Outono](temp_outono.png) | ![Temperatura Inverno](temp_inverno.png) | ![Temperatura Primavera](temp_primavera.png) |
+
+### 💨 Intensidade do Vento (m/s)
+| Verão | Outono | Inverno | Primavera |
+| :---: | :---: | :---: | :---: |
+| ![Vento Verão](vento_verao.png) | ![Vento Outono](vento_outono.png) | ![Vento Inverno](vento_inverno.png) | ![Vento Primavera](vento_primavera.png) |
+
+### 💧 Umidade Específica (kg/kg)
+| Verão | Outono | Inverno | Primavera |
+| :---: | :---: | :---: | :---: |
+| ![Umidade Verão](umidade_verao.png) | ![Umidade Outono](umidade_outono.png) | ![Umidade Inverno](umidade_inverno.png) | ![Umidade Primavera](umidade_primavera.png) |
+
+---
 
 ## 👁️ Parte 2 – Visão Computacional com YOLO
 Aplicação de visão computacional utilizando a biblioteca `YOLO/Ultralytics` para detectar elementos associados à produção de açaí e ao risco sanitário. O modelo foi treinado para realizar a detecção visual do inseto vetor (*barbeiro/triatomíneo*) e das estruturas do fruto (*acai*, *cacho*).
 
+[Clique aqui para abrir o Notebook da Parte 2](acaibarbeiro.ipynb)
 ---
 
-## 📊 Parte 3 – Análise Integrada entre Clima e Produção de Açaí
+## 📊 Parte 3 – Análise Integrada entre Clima e Production de Açaí
 
 Abaixo apresenta-se a tabela comparativa e o gráfico correlacionando os dados meteorológicos do Copernicus com os aspectos ecológicos e biológicos observados na região produtora de Igarapé-Miri, Abaetetuba e Cametá.
 
 ### 📈 Tabela Comparativa Sazonal
 
-| Estação | Precipitação | Temperatura | Umidade | Vento | Índice de Produção de Açaí |
+| Estação | Precipitação | Temperatura | Umidade | Vento | Índice de produção (qualitativo)* |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Verão** *(Dez-Fev)* | Moderada (~250 mm) | Alta (~28.5 °C) | Alta (~0.016 kg/kg) | Moderado (~3.0 m/s) | **Baixo** *(Entresafra)* |
-| **Outono** *(Mar-Mai)* | **Muito Alta** (~420 mm) | Amena (~26.5 °C) | **Máxima** (~0.018 kg/kg) | Fraco (~2.0 m/s) | **Baixo** *(Frutos em formação)* |
-| **Inverno** *(Jun-Ago)* | Baixa (~100 mm) | Alta (~29.0 °C) | Moderada (~0.0145 kg/kg) | Forte (~4.0 m/s) | **Alto** *(Início da colheita)* |
-| **Primavera** *(Set-Nov)* | **Mínima** (~50 mm) | **Máxima** (~32.0 °C) | **Mínima** (~0.0135 kg/kg) | **Muito Forte** (~5.0 m/s) | **Muito Alto** *(Pico da safra)* |
+| **Verão** | Alta/moderada | Amena | Alta | Elevado (costa) | Baixo–moderado |
+| **Outono** | Moderada | Mais baixa do ano | Alta | Moderado | Baixo |
+| **Inverno** | Mínima do ano | Elevada | Mínima relativa | Fraco (costa) | Alto (pico de safra) |
+| **Primavera** | Retomada | Máxima do ano | Mínima do ano | Máximo do ano | Moderado–alto |
 
 ### 📉 Gráfico de Correlação Sazonal
 
-![Gráfico de Análise Integrada](resultados/grafico_analise_integrada.png)
+![Gráfico de Análise Integrada](grafico_analise_integrada.png)
